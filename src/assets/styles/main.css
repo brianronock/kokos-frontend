@@ -1,0 +1,577 @@
+@import './base.css';
+
+body { 
+    background-color:var(--bgBody);
+    font-family:var(--fBody);
+    font-weight: var(--fWeightBody);
+    font-size: var(--fSizeBody);
+}
+
+#app {
+    width:100%;
+    margin:0 auto;
+    max-width:600px;
+    padding:var(--gap);
+    color:var(--coApp);
+    background-color:var(--bgApp);
+}
+
+#app * {
+    width:100%; margin:0; padding:0; box-sizing: border-box; font-size:1em;
+    overflow: hidden;
+    text-align:center;
+}
+
+/*****************************************/
+/* standard elements                     */
+/*****************************************/
+#app div {padding:0;}
+#app h1 { padding: 14px 3px 5px 3px; font-size:1.8em;}
+#app h2 { padding: 12px 3px 3px 3px; font-size:1.5em}
+#app h3 { padding: 10px 3px 2px 3px; font-size:1.3em}
+#app h4 { padding: 8px 3px 1px 3px; font-size:1.1em}
+#app p  { padding: 3px 3px 3px 3px; text-align: justify;}
+
+#app span {
+    display:inline-block;
+    width:auto
+}
+
+#app button{
+    width:auto;
+    padding: 7px 10px;
+    border-width: 0;
+    border-radius:5px;
+    background-color:var(--bgBtn);
+    color:var(--coBtn);
+    cursor: pointer; 
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Schatten */
+    transition: background-color 0.3s ease; /* Weicher Farbübergang */
+}
+#app button:hover{
+ background-color: var(--bgBtnHover);
+}
+
+
+#app input {
+    width:150px;
+    padding: 5px 10px;
+    border-width: 0;
+    border-radius: var(--borderRad);
+    font-size: 1em
+}
+
+#app label {
+    width:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px;
+    border-radius: var(--borderRad);
+}
+
+#app table {
+    border-radius: var(--borderRad);
+    overflow:hidden;
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+#app table td, #app table th { 
+    padding: 3px 8px; 
+    border: 5px solid #00000000;
+}
+#app table tr:nth-child(even) td {background-color: rgba(255, 255, 255, 0.4);}
+#app table tr:nth-child(odd) td {background-color: rgba(0, 0, 0, 0.2);}
+
+#app ul { list-style-position: inside;list-style-type: square;}
+#app li { width:100% }
+
+#app select {padding: 5px 5px 5px 5px;}
+
+#app img { 
+    width:100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    align-self: flex-start;
+ }
+
+ #app select { 
+    border-radius: var(--borderRad);
+    border-width:0;
+    padding: 0 5px;
+ }
+
+/*****************************************/
+/* Container                             */
+/*****************************************/
+#app div,
+div#app {
+   display:flex;
+   flex-flow: row wrap;
+   justify-content:center;
+   align-content: flex-start;
+   border-radius: var(--borderRad);
+   gap: var(--gap);
+}
+
+/*****************************************/
+/* boxHead                               */
+/*****************************************/
+
+#app div[boxHead] {
+
+    justify-content: flex-start;
+    align-content: center;
+    width:calc(100% - var(--gap));
+
+    padding:var(--paddingHeader);
+    border-radius: var(--borderRad);
+
+    background-color: var(--bgHead);
+    color:var(--coHead);
+
+    font-family: var(--fHeader);
+    font-weight: var(--fWeightHeader);
+    font-size: var(--fSizeHeader);
+
+}
+
+#app div[boxHead]>img { width: var(--imgSize);}
+#app div[boxHead]>div {
+    font-size: var(--fSizeHeader);
+    display:inline-block;
+    width:auto;
+    align-content: center;
+}
+
+/*****************************************/
+/* boxCont                               */
+/*****************************************/
+#app div[boxCont] {
+    width:calc(100% - var(--gap));
+    padding:var(--gap);
+    padding-bottom:15px;
+
+    background-color: var(--bgCont);
+    color:var(--coCont);
+}
+
+#app div[boxCont] h1,
+#app div[boxCont] h2,
+#app div[boxCont] h3,
+#app div[boxCont] h4 { 
+    color: var(--bgHn);
+}
+
+/*****************************************/
+/* List                                  */
+/*****************************************/
+#app div[list] {
+    width:100%;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content:center;
+    align-items: center;
+    gap:0px;
+  }
+  
+#app div[list] button{
+    color:rgb(26, 26, 122);
+    padding:0px 0px 0px 0px;
+    height:28px;
+    width:28px; 
+    margin:2px;
+    border-radius: 5px;;
+    border-width: 0;   
+    background-color: var(--bgListBtn);
+    cursor: pointer; 
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); /* Schatten */
+    transition: background-color 0.3s ease; /* Weicher Farbübergang */
+ }
+
+#app div[list] button:hover{
+    background-color: var(--bgListBtnHover);
+ }
+
+#app div[list] button>img {
+    position:relative;
+    top:2px;
+    height:20px;
+    width:20px;
+    margin:0;
+    padding:0;
+ }
+
+/*****************************************/
+/* Navbar                                */
+/*****************************************/
+#app div[navBar] {
+    background-color:var(--bgNavBar);
+    padding:10px 0;
+    display:flex;
+    justify-content: center;
+} 
+#app div[navBar]>button {
+   border-radius: 8px;
+   border: 0px;
+   margin: 0 3px;
+   background-color: var(--bgNavBtn);
+   cursor: pointer; 
+   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.8); /* Schatten */
+   transition: background-color 0.3s ease; /* Weicher Farbübergang */
+}
+#app div[navBar] button[selected] {
+    background-color: var( --bgNavBtnActive);
+}
+#app div[navBar]>button:hover {
+    background-color: var( --bgNavBtnHover);
+}
+#app div[navBar] img {
+     width:30px;
+}
+
+/*****************************************/
+/* horiz. alignment                      */
+/*****************************************/
+#app *[center] * {justify-content: center; text-align:center;}
+#app *[left] * {justify-content: flex-start; text-align: left;}
+#app *[right] * {justify-content: flex-end;text-align: right;}
+#app *[justify] * {justify-content:space-between;text-align: justify;}
+
+#app *[center] {justify-content: center; text-align:center;}
+#app *[left] {justify-content: flex-start; text-align: left;}
+#app *[right] {justify-content: flex-end;text-align: right;}
+#app *[justify] {justify-content:space-between;text-align: justify;}
+
+
+#app *[left] button, #app *[right] button {text-align: center;}
+
+#app *[center] ul,
+#app *[right] ul {list-style-type:none;}
+#app ul[left] {list-style-type:square;}
+#app ul[right] {list-style-type:none;}
+#app ul[center] {list-style-type:none;}
+
+#app img[vTop] {align-self: flex-start;}
+
+#app div[boxCont][left] {padding-left:calc(var(--gap) + 2px);padding-right:2px;}
+#app div[boxCont][right]{padding-left: 2px; padding-right:calc(var(--gap) + 2px)}
+
+#app div[left]{padding-left:3px;padding-right:0px;}
+#app div[right]{padding-left:0px;padding-right:3px;}
+
+/*****************************************/
+/* vert. Alignment alignment             */
+/*****************************************/
+#app *[vCenter] {align-content: center;}
+#app *[vTop] {align-content: flex-start;}
+#app *[vBottom] {align-content: flex-end;}
+#app *[vBetween] {align-content:space-between;}
+#app *[vArround] {align-content:space-around;}
+#app *[vEvenly] {align-content:space-evenly;}
+
+/*****************************************/
+/* Height, width, aspect ratio           */
+/*****************************************/
+#app *[h-0] { height:0px;}
+#app *[h-1] { height:1px;}
+#app *[h-2] { height:2px;}
+#app *[h-3] { height:3px;}
+#app *[h-4] { height:4px;}
+#app *[h-5] { height:5px;}
+#app *[h-10] { height:10px;}
+#app *[h-15] { height:15px;}
+#app *[h-20] { height:20px;}
+#app *[h-25] { height:25px;}
+#app *[h-30] { height:30px;}
+#app *[h-35] { height:35px;}
+#app *[h-40] { height:40px;}
+#app *[h-45] { height:45px;}
+#app *[h-50] { height:50px;}
+#app *[h-55] { height:55px;}
+#app *[h-60] { height:60px;}
+#app *[h-65] { height:65px;}
+#app *[h-70] { height:70px;}
+#app *[h-75] { height:75px;}
+#app *[h-80] { height:80px;}
+#app *[h-85] { height:85px;}
+#app *[h-90] { height:90px;}
+#app *[h-95] { height:95px;}
+#app *[h-100] { height:100px;}
+#app *[h-125] { height:125px;}
+#app *[h-150] { height:150px;}
+#app *[h-175] { height:175px;}
+#app *[h-200] { height:200px;}
+#app *[h-225] { height:225px;}
+#app *[h-250] { height:250px;}
+#app *[h-275] { height:275px;}
+#app *[h-300] { height:300px;}
+#app *[h-325] { height:325px;}
+#app *[h-350] { height:350px;}
+#app *[h-375] { height:375px;}
+#app *[h-400] { height:400px;}
+#app *[h-425] { height:425px;}
+#app *[h-450] { height:450px;}
+#app *[h-475] { height:475px;}
+#app *[h-500] { height:500px;}
+
+#app *[w-10] {width:calc(10% - var(--gap));}
+#app *[w-15] {width:calc(15% - var(--gap))}
+#app *[w-20] {width:calc(20% - var(--gap))}
+#app *[w-25] {width:calc(25% - var(--gap))}
+#app *[w-30] {width:calc(30% - var(--gap))}
+#app *[w-33] {width:calc(33.33% - var(--gap))}
+#app *[w-35] {width:calc(35% - var(--gap))}
+#app *[w-40] {width:calc(40% - var(--gap))}
+#app *[w-45] {width:calc(45% - var(--gap))}
+#app *[w-50] {width:calc(50% - var(--gap))}
+#app *[w-55] {width:calc(55% - var(--gap))}
+#app *[w-60] {width:calc(60% - var(--gap))}
+#app *[w-65] {width:calc(65% - var(--gap))}
+#app *[w-70] {width:calc(70% - var(--gap))}
+#app *[w-75] {width:calc(75% - var(--gap))}
+#app *[w-80] {width:calc(80% - var(--gap))}
+#app *[w-85] {width:calc(85% - var(--gap))}
+#app *[w-90] {width:calc(90% - var(--gap))}
+#app *[w-95] {width:calc(95% - var(--gap))}
+#app *[w-100] {width:calc(100% - var(--gap))}
+
+#app *[ar-9] {aspect-ratio: 9;}
+#app *[ar-8] {aspect-ratio: 8;}
+#app *[ar-7] {aspect-ratio: 7;}
+#app *[ar-6] {aspect-ratio: 6;}
+#app *[ar-5] {aspect-ratio: 5;}
+#app *[ar-4] {aspect-ratio: 4;}
+#app *[ar-3] {aspect-ratio: 3;}
+#app *[ar-2] {aspect-ratio: 2;}
+#app *[ar-1] {aspect-ratio: 1;}
+#app *[ar-3-2] {aspect-ratio: 3/2}
+#app *[ar-3-4] {aspect-ratio: 3/4}
+#app *[ar-1-2] {aspect-ratio: 1/2}
+
+/*****************************************/
+/* padding & margin                      */
+/*****************************************/
+#app *[p-0] {padding:0px}
+#app *[p-1] {padding:1px}
+#app *[p-2] {padding:2px}
+#app *[p-3] {padding:3px}
+#app *[p-4] {padding:4px}
+#app *[p-5] {padding:5px}
+#app *[p-10] {padding:10px}
+#app *[p-15] {padding:15px}
+#app *[p-20] {padding:20px}
+#app *[p-25] {padding:25px}
+#app *[p-30] {padding:30px}
+#app *[p-35] {padding:35px}
+#app *[p-40] {padding:40px}
+#app *[p-45] {padding:45px}
+#app *[p-50] {padding:50px}
+
+#app *[pr-0] {padding-right:0px}
+#app *[pr-1] {padding-right:1px}
+#app *[pr-2] {padding-right:2px}
+#app *[pr-3] {padding-right:3px}
+#app *[pr-4] {padding-right:4px}
+#app *[pr-5] {padding-right:5px}
+#app *[pr-10] {padding-right:10px}
+#app *[pr-15] {padding-right:15px}
+#app *[pr-20] {padding-right:20px}
+#app *[pr-25] {padding-right:25px}
+#app *[pr-30] {padding-right:30px}
+#app *[pr-35] {padding-right:35px}
+#app *[pr-40] {padding-right:40px}
+#app *[pr-45] {padding-right:45px}
+#app *[pr-50] {padding-right:50px}
+
+#app *[pl-0] {padding-left:0px}
+#app *[pl-1] {padding-left:1px}
+#app *[pl-2] {padding-left:2px}
+#app *[pl-3] {padding-left:3px}
+#app *[pl-4] {padding-left:4px}
+#app *[pl-5] {padding-left:5px}
+#app *[pl-10] {padding-left:10px}
+#app *[pl-15] {padding-left:15px}
+#app *[pl-20] {padding-left:20px}
+#app *[pl-25] {padding-left:25px}
+#app *[pl-30] {padding-left:30px}
+#app *[pl-35] {padding-left:35px}
+#app *[pl-40] {padding-left:40px}
+#app *[pl-45] {padding-left:45px}
+#app *[pl-50] {padding-left:50px}
+
+#app *[pt-0] {padding-top:0px}
+#app *[pt-1] {padding-top:1px}
+#app *[pt-2] {padding-top:2px}
+#app *[pt-3] {padding-top:3px}
+#app *[pt-4] {padding-top:4px}
+#app *[pt-5] {padding-top:5px}
+#app *[pt-10] {padding-top:10px}
+#app *[pt-15] {padding-top:15px}
+#app *[pt-20] {padding-top:20px}
+#app *[pt-25] {padding-top:25px}
+#app *[pt-30] {padding-top:30px}
+#app *[pt-35] {padding-top:35px}
+#app *[pt-40] {padding-top:40px}
+#app *[pt-45] {padding-top:45px}
+#app *[pt-50] {padding-top:50px}
+
+#app *[pb-0] {padding-bottom:0px}
+#app *[pb-1] {padding-bottom:1px}
+#app *[pb-2] {padding-bottom:2px}
+#app *[pb-3] {padding-bottom:3px}
+#app *[pb-4] {padding-bottom:4px}
+#app *[pb-5] {padding-bottom:5px}
+#app *[pb-10] {padding-bottom:10px}
+#app *[pb-15] {padding-bottom:15px}
+#app *[pb-20] {padding-bottom:20px}
+#app *[pb-25] {padding-bottom:25px}
+#app *[pb-30] {padding-bottom:30px}
+#app *[pb-35] {padding-bottom:35px}
+#app *[pb-40] {padding-bottom:40px}
+#app *[pb-45] {padding-bottom:45px}
+#app *[pb-50] {padding-bottom:50px}
+
+#app *[m-0] {margin:0px}
+#app *[m-1] {margin:1px}
+#app *[m-2] {margin:2px}
+#app *[m-3] {margin:3px}
+#app *[m-4] {margin:4px}
+#app *[m-5] {margin:5px}
+#app *[m-10] {margin:10px}
+#app *[m-15] {margin:15px}
+#app *[m-20] {margin:20px}
+#app *[m-15] {margin:15px}
+#app *[m-20] {margin:20px}
+#app *[m-25] {margin:25px}
+#app *[m-30] {margin:30px}
+#app *[m-35] {margin:35px}
+#app *[m-40] {margin:40px}
+#app *[m-45] {margin:45px}
+#app *[m-50] {margin:50px}
+
+#app *[mr-0] {margin-right:0px}
+#app *[mr-1] {margin-right:1px}
+#app *[mr-2] {margin-right:2px}
+#app *[mr-3] {margin-right:3px}
+#app *[mr-4] {margin-right:4px}
+#app *[mr-5] {margin-right:5px}
+#app *[mr-10] {margin-right:10px}
+#app *[mr-15] {margin-right:15px}
+#app *[mr-20] {margin-right:20px}
+#app *[mr-25] {margin-right:25px}
+#app *[mr-30] {margin-right:30px}
+#app *[mr-35] {margin-right:35px}
+#app *[mr-40] {margin-right:40px}
+#app *[mr-45] {margin-right:45px}
+#app *[mr-50] {margin-right:50px}
+
+#app *[ml-0] {margin-left:0px}
+#app *[ml-1] {margin-left:1px}
+#app *[ml-2] {margin-left:2px}
+#app *[ml-3] {margin-left:3px}
+#app *[ml-4] {margin-left:4px}
+#app *[ml-5] {margin-left:5px}
+#app *[ml-10] {margin-left:10px}
+#app *[ml-15] {margin-left:15px}
+#app *[ml-20] {margin-left:20px}
+#app *[ml-25] {margin-left:25px}
+#app *[ml-30] {margin-left:30px}
+#app *[ml-35] {margin-left:35px}
+#app *[ml-40] {margin-left:40px}
+#app *[ml-45] {margin-left:45px}
+#app *[ml-50] {margin-left:50px}
+
+#app *[mt-0] {margin-top:0px}
+#app *[mt-1] {margin-top:1px}
+#app *[mt-2] {margin-top:2px}
+#app *[mt-3] {margin-top:3px}
+#app *[mt-4] {margin-top:4px}
+#app *[mt-5] {margin-top:5px}
+#app *[mt-10] {margin-top:10px}
+#app *[mt-15] {margin-top:15px}
+#app *[mt-20] {margin-top:20px}
+#app *[mt-25] {margin-top:25px}
+#app *[mt-30] {margin-top:30px}
+#app *[mt-35] {margin-top:35px}
+#app *[mt-40] {margin-top:40px}
+#app *[mt-45] {margin-top:45px}
+#app *[mt-50] {margin-top:50px}
+
+#app *[mb-0] {margin-bottom:0px}
+#app *[mb-1] {margin-bottom:1px}
+#app *[mb-2] {margin-bottom:2px}
+#app *[mb-3] {margin-bottom:3px}
+#app *[mb-4] {margin-bottom:4px}
+#app *[mb-5] {margin-bottom:5px}
+#app *[mb-10] {margin-bottom:10px}
+#app *[mb-15] {margin-bottom:15px}
+#app *[mb-20] {margin-bottom:20px}
+#app *[mb-25] {margin-bottom:25px}
+#app *[mb-30] {margin-bottom:30px}
+#app *[mb-35] {margin-bottom:35px}
+#app *[mb-40] {margin-bottom:40px}
+#app *[mb-45] {margin-bottom:45px}
+#app *[mb-50] {margin-bottom:50px}
+
+
+/*****************************************/
+/* Colors Font & Text                    */
+/*****************************************/
+#app *[bg-t] { background-color:rgba(255, 255, 255, 0);}
+#app *[bg-tw] { background-color: rgba(255, 255, 255, 0.25);}
+#app *[bg-tb] { background-color:rgba(0, 0, 0, 0.25);}
+
+#app *[bg-1], #app div[boxCont][bg-1]{ background-color: var(--bgCust1) }
+#app *[bg-2], #app div[boxCont][bg-2]{ background-color: var(--bgCust2) }
+#app *[bg-3], #app div[boxCont][bg-3]{ background-color: var(--bgCust3) }
+#app *[bg-4], #app div[boxCont][bg-4]{ background-color: var(--bgCust4) }
+#app *[bg-5], #app div[boxCont][bg-5]{ background-color: var(--bgCust5) }
+#app *[bg-6], #app div[boxCont][bg-6]{ background-color: var(--bgCust6) }
+
+#app *[co-1], #app div[boxCont][co-1]{ color: var(--coCust1) }
+#app *[co-2], #app div[boxCont][co-2]{ color: var(--coCust2) }
+#app *[co-3], #app div[boxCont][co-3]{ color: var(--coCust3) }
+#app *[co-4], #app div[boxCont][co-4]{ color: var(--coCust4) }
+#app *[co-5], #app div[boxCont][co-5]{ color: var(--coCust5) }
+#app *[co-6], #app div[boxCont][co-6]{ color: var(--coCust6) }
+
+#app div[boxCont] *[co-1] * { color: var(--coCust1) }
+#app div[boxCont] *[co-2] * { color: var(--coCust2) }
+#app div[boxCont] *[co-3] * { color: var(--coCust3) }
+#app div[boxCont] *[co-4] * { color: var(--coCust4) }
+#app div[boxCont] *[co-5] * { color: var(--coCust5) }
+#app div[boxCont] *[co-6] * { color: var(--coCust6) }
+
+#app *[t-upper] { text-transform:uppercase;  }
+#app *[t-lower] { text-transform:lowercase;  }
+#app *[t-cap]   { text-transform:capitalize  }
+#app *[t-hv] {font-style: italic; font-weight:bold}
+#app *[f-italic] { font-style: italic;}
+#app *[f-bold] {font-weight:bold;}
+#app *[f-small], #app div[boxHead]>div[f-big] { font-size: 0.8em;}
+#app *[f-normal], #app div[boxHead]>div[f-big] { font-size: 1em;}
+#app *[f-big], #app div[boxHead]>div[f-big] { font-size: 1.2em}
+#app *[f-bigest], #app div[boxHead]>div[f-bigest] { font-size: 1.4em}
+
+#app *[f-1] { font-family: var(--fCust1);}
+#app *[f-2] { font-family: var(--fCust2);}
+#app *[f-3] { font-family: var(--fCust3);}
+#app *[f-4] { font-family: var(--fCust4);}
+#app *[f-5] { font-family: var(--fCust5);}
+#app *[f-6] { font-family: var(--fCust6);}
+#app *[f-7] { font-family: var(--fCust7);}
+#app *[f-8] { font-family: var(--fCust8);}
+#app *[f-9] { font-family: var(--fCust9);}
+
+#app *[f-1] select, #app *[f-2] select, #app *[f-3] select,
+#app *[f-4] select, #app *[f-5] select, #app *[f-6] select,
+#app *[f-7] select, #app *[f-8] select, #app *[f-9] select { 
+    font-family: inherit;
+}
+
+#app select[f-1], #app select[f-2], #app select[f-3],
+#app select[f-4], #app select[f-5], #app select[f-6],
+#app select[f-7], #app select[f-8], #app select[f-9]{ 
+    font-family: initial;
+}

@@ -1,0 +1,136 @@
+:root {
+  /* Allgemein*/
+  --gap: 5px;
+  --borderRad: 5px;
+
+  /* Body */
+  --bgBody: rgb(187, 212, 245);
+  --fBody: 'comfortaa';
+  --fWeightBody: normal;
+  --fSizeBody: 1em;
+
+  /* Header */
+  --bgHead: rgb(187, 149, 149);
+  --coHead: rgb(1, 12, 22);
+  --paddingHeader: 10px 10px 10px 10px;
+  --imgSize: 50px;
+  --fHeader: 'comfortaa';
+  --fWeightHeader: 100;
+  --fSizeHeader: 28px;
+
+  /* App */
+  --bgApp: rgb(78, 78, 90);
+  --coApp: aliceblue;
+
+  /* boxCont */
+  --bgCont: rgb(181, 181, 196);
+  --coCont: rgb(17, 3, 7);
+
+  /* list */
+  --bgListBtn: rgb(190, 191, 202);
+  --bgListBtnHover: rgba(185, 207, 255, 0.842);
+
+  /* Button */
+  --bgBtn: rgb(217, 221, 235);
+  --bgBtnHover: rgba(160, 189, 207, 0.5);
+  --coBtn: rgb(63, 12, 12);
+
+  /* h1,h2,h3,h4 */
+  --bgHn: rgb(63, 45, 23);
+
+  /* NavBar */
+  --bgNavBar: rgb(83, 77, 69);
+  --bgNavBtn: rgb(209, 189, 163);
+  --bgNavBtnHover: rgba(209, 189, 163, 0.5);
+  --bgNavBtnActive: rgba(200, 186, 240, 0.658);
+  --coBtn: rgb(13, 42, 68);
+
+  --fNavBar: 'comfortaa';
+  --fWeightNavBar: normal;
+  --fSizeNavBar: 22px;
+
+  /* Custom Background-colors */
+  --bgCust1: rgb(219, 188, 184);
+  --bgCust2: rgb(168, 184, 202);
+  --bgCust3: rgb(181, 202, 191);
+
+  --bgCust4: rgb(83, 52, 76);
+  --bgCust5: rgb(34, 47, 77);
+  --bgCust6: rgb(35, 58, 47);
+
+  /* Custom -colors */
+  --coCust1: rgb(71, 47, 71);
+  --coCust2: rgb(43, 39, 105);
+  --coCust3: rgb(55, 71, 59);
+
+  --coCust4: rgb(216, 203, 215);
+  --coCust5: rgba(219, 219, 235);
+  --coCust6: rgb(252, 215, 215);
+
+  /* Custom fonts */
+  --fCust1: 'comfortaa';
+  --fCust2: 'monserrat';
+  --fCust3: 'roboto';
+
+  --fCust4: 'caveat';
+  --fCust5: 'indie flower';
+  --fCust6: 'grape nuts';
+
+  --fCust7: 'buda light';
+  --fCust8: 'cincel';
+  --fCust9: 'bellefair';
+}
+
+@font-face {
+  font-family: 'comfortaa';
+  font-weight: normal;
+  src: url('../fonts/Comfortaa-VariableFont.ttf');
+}
+
+@font-face {
+  font-family: 'monserrat';
+  font-weight: normal;
+  src: url('../fonts/Montserrat-VariableFont.ttf');
+}
+
+@font-face {
+  font-family: 'roboto';
+  font-weight: normal;
+  src: url('../fonts/Roboto-VariableFont.ttf');
+}
+
+@font-face {
+  font-family: 'caveat';
+  font-weight: normal;
+  src: url('../fonts/Caveat-VariableFont.ttf');
+}
+
+@font-face {
+  font-family: 'indie flower';
+  font-weight: normal;
+  src: url('../fonts/IndieFlower-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'grape nuts';
+  font-weight: normal;
+  src: url('../fonts/GrapeNuts-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'bellefair';
+  font-weight: normal;
+  src: url('../fonts/Bellefair-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'buda light';
+  font-weight: normal;
+  src: url('../fonts/Buda-Light.ttf');
+}
+
+@font-face {
+  font-family: 'cincel';
+  font-weight: normal;
+  src: url('../fonts/Cinzel-VariableFont.ttf');
+}
