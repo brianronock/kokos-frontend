@@ -52,7 +52,7 @@ export default function Offer({ id }) {
           </div>
         </div>
 
-        <div className="resources-section center">
+        <div className="resources-section">
           <h3 className="f-big">Download Resources</h3>
           <div className="resources-grid">
             {[

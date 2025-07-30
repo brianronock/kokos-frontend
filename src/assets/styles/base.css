@@ -23,7 +23,7 @@
   --coApp: aliceblue;
 
   /* boxCont */
-  --bgCont: rgb(181, 181, 196);
+  --bgCont: #022D5E;
   --coCont: rgb(17, 3, 7);
 
   /* list */
@@ -39,35 +39,39 @@
   --bgHn: rgb(63, 45, 23);
 
   /* NavBar */
-  --bgNavBar: rgb(83, 77, 69);
   --bgNavBtn: rgb(209, 189, 163);
   --bgNavBtnHover: rgba(109, 163, 255, 0.1);
   --bgNavBtnActive: rgba(200, 186, 240, 0.658);
   --coBtn: rgb(13, 42, 68);
   --bgNavBar: #022D5E;
   --coNavLink: #FBFAFB;
-  --coNavLinkHover: #FD8804;
+  --coNavLinkHover: rgb(253, 136, 4);
   --fNavBar: 'comfortaa';
   --fWeightNavBar: normal;
   --fSizeNavBar: 22px;
 
   /* Custom Background-colors */
-  --bgCust1: rgb(219, 188, 184);
-  --bgCust2: rgb(168, 184, 202);
-  --bgCust3: rgb(181, 202, 191);
-
-  --bgCust4: rgb(83, 52, 76);
+  --bgCust1: rgb(253, 136, 4);
+  --bgCust2: rgb(229, 239, 255);
+  --bgCust3: rgb(187, 212, 245);
+  --bgCust4: rgb(2, 45, 94);
   --bgCust5: rgb(34, 47, 77);
   --bgCust6: rgb(35, 58, 47);
+  --bgCust7: rgb(168, 184, 202);
+  --bgCust8: rgb(181, 202, 191);
+  --bgCust9: rgb(83, 52, 76);
 
   /* Custom -colors */
   --coCust1: rgb(71, 47, 71);
   --coCust2: rgb(43, 39, 105);
   --coCust3: rgb(55, 71, 59);
-
   --coCust4: rgb(216, 203, 215);
-  --coCust5: rgba(219, 219, 235);
-  --coCust6: rgb(252, 215, 215);
+  --coCust5: rgb(251, 250, 251);
+  --coCust6: rgb(74, 85, 104);
+  --coCust7: rgb(127, 141, 165);
+  --coCust8: rgb(19, 30, 48);
+  --coCust10: rgb(252, 215, 215);
+  --coCust11: rgba(219, 219, 235);
 
   /* Custom fonts */
   --fCust1: 'comfortaa';

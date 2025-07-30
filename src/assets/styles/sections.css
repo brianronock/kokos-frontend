@@ -32,7 +32,6 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 100%;
 
 }
 #root .hero-section .hero-title-cont {
@@ -161,7 +160,6 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 100%;
 }
 #root .offer-section .section-header {
     text-align: center;
@@ -331,7 +329,6 @@
     max-width: 1200px;
     margin: 1rem auto;
     padding: 0 1rem;
-    width: 100%;
 }
 #root .faq-section .section-header {
     text-align: center;
@@ -444,7 +441,6 @@
     max-width: 1200px;
     margin: 1rem auto;
     padding: 0 1rem;
-    width: 100%;
 }
 #root .contact-section .section-header {
     text-align: center;
@@ -573,7 +569,6 @@
     max-width: 1200px;
     margin: 1rem auto;
     padding: 0 1rem;
-    width: 100%;
 }
 #root .how-section .section-header {
     text-align: center;
@@ -727,15 +722,16 @@
     max-width: 1200px;
     margin: 1rem auto;
     padding: 0 1rem;
-    width: 100%;
 }
 #root .team-section .section-header {
     text-align: center;
     margin-bottom: 4rem;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
+    flex-flow: row wrap;
+    gap: var(--gap);
+    width: 100%;
+    justify-content: center;
+    align-content: flex-start;
 }
 #root .team-section .section-header h2 {
     font-size: 2.5rem;
@@ -743,7 +739,7 @@
 }
 #root .team-section .section-header p {
     font-size: 1.25rem;
-    color: #7f8da5; /* Mid-tone grey for contrast */
+    color: #7f8da5;
 }
 #root .team-section .team-grid {
     display: grid;
@@ -754,7 +750,9 @@
     background-color: #e8eff8e2;
     padding: 2rem;
     border-radius: 1rem;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
 }
@@ -774,6 +772,7 @@
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     color: var(--bgNavBar);
+    text-wrap: nowrap;
 }
 #root .team-section .member-role {
     color: var(--coNavLinkHover);
@@ -826,8 +825,6 @@
     max-width: 1200px;
     margin: 1rem auto;
     padding: 0 1rem;
-    width: 100%;
-
 }
 #root .why-section .section-header {
     text-align: center;
@@ -926,17 +923,12 @@
 
 /* Custom properties (ensure in :root in base.css) */
 :root {
-    --bgNavBar: #022D5E;
-    --coNavLink: #FBFAFB;
-    --coNavLinkHover: #FD8804;
-    --bgNavBtnHover: rgba(109, 163, 255, 0.1);
-    --bgCust2: #E5EFFF;
-    --bgCust3: #BBD4F5;
-    --coCust6: #4A5568;
-    --bgCust4: #022D5E;
-    --coCust5: #FBFAFB;
-    /* Add if missing */
-    --coCust7: #7f8da5;
-    --coCust8: #131e30;
+    --bgCust2: rgb(229, 239, 255);
+    --bgCust3: rgb(187, 212, 245);
+    --coCust6: rgb(74, 85, 104);
+    --bgCust4: rgb(2, 45, 94);
+    --coCust5: rgb(251, 250, 251);
+    --coCust7: rgb(127, 141, 165);
+    --coCust8: rgb(19, 30, 48);
 }
 
