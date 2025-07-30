@@ -1,19 +1,31 @@
 @import './base.css';
 
+html {
+    width: 100%;
+
+}
+
 body {
-    background-color: var(--bgBody);
+    background-color: var(--bgCont);
     font-family: var(--fBody);
     font-weight: var(--fWeightBody);
     font-size: var(--fSizeBody);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
 }
 
 #root {
-    width: 100%;
+    width: 100vw;
     margin: 0 auto;
     max-width: 1200px;
-    padding: var(--gap);
+    padding: 0;
+    /* padding: var(--gap); */
     color: var(--coApp);
-    background-color: var(--bgApp);
+    background-color: var(--bgBody);
+    overflow-x: hidden;
+
 }
 
 #root * {
@@ -24,18 +36,19 @@ body {
 }
 
 #root main {
+    background-color: var(--bgCont);
     padding-top: 0px;
 }
 
 /*****************************************/
 /*standard elements                     */
 /*****************************************/
-#root div { padding: 0; }
+#root div { padding: 0;}
 #root h1 { padding: 14px 3px 5px 3px; font-size: 1.8em; }
 #root h2 { padding: 12px 3px 3px 3px; font-size: 1.5em; }
 #root h3 { padding: 10px 3px 2px 3px; font-size: 1.3em; }
 #root h4 { padding: 8px 3px 1px 3px; font-size: 1.1em; }
-#root p { padding: 3px 3px 3px 3px; text-align: justify; }
+#root p { padding: 3px 3px 3px 3px; text-align: center; }
 #root span { display: inline-block; width: auto; }
 #root button, #root .btn {
     width: auto;
@@ -202,6 +215,9 @@ div#root {
     right: 0;
     z-index: 1000;
     box-shadow: 4px 10px 16px -1px rgba(0, 0, 0, 0.4);
+    width: 100vw;
+    height: 60px;
+
 }
 #root .navBar > .container {
     max-width: 1200px;
@@ -212,6 +228,7 @@ div#root {
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    margin-top: -20px;
 }
 #root .navBar .logo {
     display: flex;
@@ -250,8 +267,8 @@ div#root {
 }
 #root .navBar .menu-toggle {
     width: auto;
-    padding: 8px;
-    font-size: 2rem;
+    padding: 5px 8px 0 8px;
+    font-size: 2.7rem;
     background-color: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 12px;
@@ -259,6 +276,7 @@ div#root {
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
     margin-right: 20px;
+    margin-top: -10px;
 }
 #root .navBar .menu-toggle:hover {
     background-color: rgba(255, 255, 255, 0.1);
@@ -266,6 +284,7 @@ div#root {
 }
 #root .navBar .menu-toggle:active {
     transform: scale(0.95);
+    color: var(--bgCust1);
 }
 #root .navBar .mobile-menu-overlay {
     position: fixed;
@@ -280,6 +299,7 @@ div#root {
     padding-top: 64px;
 }
 #root .navBar .mobile-menu-items {
+    margin-top: -5px;
     background: rgba(109, 163, 255, 0.07);
     width: 80%;
     max-width: 300px;
@@ -290,6 +310,8 @@ div#root {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.15);
     animation: slideIn 0.3s ease forwards;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
 }
 @keyframes slideIn {
     from { transform: translateY(-20px); opacity: 0; }
@@ -299,6 +321,7 @@ div#root {
     width: auto;
     padding: 16px;
     color: var(--coNavLink);
+    border-radius: 12px;
     font-size: 1em;
     text-decoration: none;
     transition: background 0.3s ease, color 0.3s ease;
@@ -307,6 +330,17 @@ div#root {
     color: var(--coNavLinkHover);
     background-color: rgba(109, 163, 255, 0.07);
     border: 1px solid rgba(255, 255, 255, 0.228);
+    animation: slideLeft 0.5s ease forwards;
+
+}
+#root .navBar .mobile-nav-link:active {
+    animation: slideLeft 0.3s ease forwards;
+}
+@keyframes slideLeft {
+    from { transform: translateX(-10px); opacity: 1; }
+    50% { transform:  translateX(20px); opacity: 0.3;}
+    85% { transform: translateX(-5px); opacity: 0.8; }
+    to { transform: translateX(0); opacity: 1; }
 }
 @media (min-width: 768px) {
     #root .navBar .desktop-nav {
@@ -319,9 +353,6 @@ div#root {
     }
     #root .navBar .logo-img {
         margin: 15px 0 0 20px;
-    }
-    #root main {
-    padding-top: 120px;
     }
 }
 
