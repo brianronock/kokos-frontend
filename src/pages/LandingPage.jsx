@@ -1,3 +1,4 @@
+// src/pages/LandingPage.jsx
 import Hero from '../sections/Hero';
 import Why from '../sections/Why';
 import How from '../sections/How';
@@ -10,16 +11,16 @@ import Footer from '../components/Footer';
 
 export default function LandingPage() {
   return (
-    <div className="bg-white text-neutral-900 overflow-x-hidden">
+    <div className="bg-t">
       <Navbar />
       <main>
-        <Hero />
-        <Why />
-        <How />
-        <Offer />
-        <Team />
-        <FAQ />
-        <Contact />
+        <Hero id="hero"/>
+        <Why id="why" />
+        <How id="how" />
+        <Offer id="offer" />
+        <Team id="team" />
+        <FAQ id="faq" />
+        <Contact id="contact" />
       </main>
       <Footer />
     </div>

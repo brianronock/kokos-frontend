@@ -1,15 +1,54 @@
-import React from "react";
+// src/sections/How.jsx
+export default function How({ id }) {
+  const timelineItems = [
+    {
+      step: 1,
+      title: 'Request Demo',
+      text: "Schedule a personalized demonstration of the KOKOS platform to see how it fits your school's needs.",
+      side: 'left',
+    },
+    {
+      step: 2,
+      title: 'Sign MoU',
+      text: 'Formalize the partnership with a Memorandum of Understanding outlining terms and expectations.',
+      side: 'right',
+    },
+    {
+      step: 3,
+      title: 'School Subdomain Setup',
+      text: 'Get your personalized school portal at schoolname.kokos.ai with customized branding and content.',
+      side: 'left',
+    },
+    {
+      step: 4,
+      title: 'Training & Onboarding',
+      text: 'Comprehensive teacher training and student onboarding to ensure smooth implementation and success.',
+      side: 'right',
+    },
+  ];
 
-export default function How() {
   return (
-    <section className="boxCont bg-5 co-5 p-3">
-      <h2>How It Works</h2>
-      <ol className="p-2">
-        <li>1. <strong>Request a Demo</strong> – Get a personalized walkthrough of our platform.</li>
-        <li>2. <strong>Sign the MoU</strong> – Partner with us to begin the integration.</li>
-        <li>3. <strong>Subdomain Setup</strong> – We create your custom school portal (e.g., <i>yourname.kokos.ai</i>).</li>
-        <li>4. <strong>Training & Onboarding</strong> – We train teachers and support student rollout.</li>
-      </ol>
+    <section id={id} className="how-section">
+      <div className="container">
+        <div className="section-header center">
+          <h2 className="f-xl f-bold">How It Works</h2>
+          <p className="f-normal">Simple steps to bring AI education to your school</p>
+        </div>
+
+        <div className="timeline">
+          <div className="timeline-line"></div>
+          {timelineItems.map((item, index) => (
+            <div key={index} className="timeline-item">
+              <div className={`timeline-content ${item.side}`}>
+                <div className="step-number f-1">{item.step}</div>
+                <h3 className="f-big">{item.title}</h3>
+                <p className="f-normal">{item.text}</p>
+              </div>
+              <div className="timeline-dot"></div>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

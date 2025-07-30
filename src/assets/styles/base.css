@@ -41,10 +41,12 @@
   /* NavBar */
   --bgNavBar: rgb(83, 77, 69);
   --bgNavBtn: rgb(209, 189, 163);
-  --bgNavBtnHover: rgba(209, 189, 163, 0.5);
+  --bgNavBtnHover: rgba(109, 163, 255, 0.1);
   --bgNavBtnActive: rgba(200, 186, 240, 0.658);
   --coBtn: rgb(13, 42, 68);
-
+  --bgNavBar: #022D5E;
+  --coNavLink: #FBFAFB;
+  --coNavLinkHover: #FD8804;
   --fNavBar: 'comfortaa';
   --fWeightNavBar: normal;
   --fSizeNavBar: 22px;
