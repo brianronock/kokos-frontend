@@ -1,18 +1,58 @@
-export default function Why() {
+// src/sections/Why.jsx
+export default function Why({ id }) {
+  const features = [
+    {
+      icon: 'psychology',
+      title: 'Critical Thinking',
+      text: 'AI education develops logical reasoning, problem-solving skills, and computational thinking from an early age.',
+    },
+    {
+      icon: 'trending_up',
+      title: 'Future Readiness',
+      text: "85% of jobs that will exist in 2030 haven't been invented yet. AI literacy ensures students are prepared for tomorrow's careers.",
+    },
+    {
+      icon: 'school',
+      title: 'Modern Learning',
+      text: 'Interactive, engaging methods that make learning fun while building essential 21st-century skills.',
+    },
+  ];
+
+  const stats = [
+    { number: '50M+', label: 'AI-related jobs by 2025' },
+    { number: '90%', label: 'Of companies use AI technology' },
+    { number: '75%', label: 'Higher earning potential with AI skills' },
+  ];
+
   return (
-    <section className="bg-1 boxCont py-16 text-center">
-      <h2 className="fs-3xl fw-600 mb-6">Why AI Education?</h2>
-      <p className="fs-base max-w-3xl mx-auto mb-4">
-        AI literacy is no longer optional—it's essential. By introducing AI and coding from an early age,
-        we equip learners with tools to think critically, solve real-world problems, and thrive in a
-        tech-driven future.
-      </p>
-      <ul className="fs-sm max-w-2xl mx-auto text-left list-disc pl-6 mt-6">
-        <li>Boosts problem-solving and logic</li>
-        <li>Builds confidence in technology use</li>
-        <li>Prepares learners for 21st-century careers</li>
-        <li>Bridges the digital divide in underserved communities</li>
-      </ul>
+    <section id={id} className="why-section">
+      <div className="container">
+        <div className="section-header center">
+          <h2 className="f-xl f-bold">Why AI Education Matters</h2>
+          <p className="f-normal">Preparing young minds for a future where AI literacy is as essential as traditional reading and writing.</p>
+        </div>
+
+        <div className="features-grid">
+          {features.map((feature, index) => (
+            <div key={index} className="feature-card">
+              <div className="feature-icon">
+                <span className="material-symbols-outlined">{feature.icon}</span>
+              </div>
+              <h3 className="f-big">{feature.title}</h3>
+              <p className="f-normal">{feature.text}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="stats-container">
+          {stats.map((stat, index) => (
+            <div key={index} className="stat-item">
+              <div className="stat-number f-xl f-bold">{stat.number}</div>
+              <div className="stat-label f-normal">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

@@ -1,35 +1,57 @@
+// src/components/Footer.jsx
+import { Link, useLocation } from 'react-router-dom';
+
 export default function Footer() {
+  const location = useLocation();
+
+  const links = [
+    { href: '/#why', id: 'why', label: 'Why AI?' },
+    { href: '/#how', id: 'how', label: 'How It Works' },
+    { href: '/#contact', id: 'contact', label: 'Contact Us' },
+  ];
+
+  const handleLinkClick = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      const navbarHeight = document.querySelector('.navBar')?.offsetHeight || 80;
+      const yOffset = -navbarHeight;
+      const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
+
   return (
-    <footer className="bg-2 co-5 py-10 mt-10">
-      <div className="boxCont text-center">
-        <p className="fs-xs mb-2">&copy; {new Date().getFullYear()} FutureTech. All rights reserved.</p>
-        <div className="space-x-3">
-          <a href="https://facebook.com" target="_blank" rel="noreferrer" className="fs-xs underline">
-            Facebook
-          </a>
-          <a href="mailto:team@futuretechafrica.com" className="fs-xs underline">
-            Email Us
-          </a>
+    <footer className="boxCont footer p-20">
+      <div className="w-max-800 center" style={{ gap: 'var(--gap)' }}>
+        <div className="w-33">
+          <h3 className="f-big f-bold">FutureTech Africa</h3>
+          <p className="f-normal">Empowering the next generation through AI and coding education.</p>
+        </div>
+        <div className="w-33">
+          <h3 className="f-big f-bold">Links</h3>
+          <ul className="f-normal left">
+            {links.map((link) => (
+              <li key={link.href}>
+                <Link
+                  to={link.href}
+                  className={`footer-link f-1 ${location.hash === `#${link.id}` ? 'selected' : ''}`}
+                  onClick={() => handleLinkClick(link.id)}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="w-33 left">
+          <h3 className="f-big f-bold">Contact</h3>
+          <p className="f-normal">
+            Email: <a href="mailto:kokosnamibia@gmail.com" className="f-1">kokosnamibia@gmail.com</a><br />
+            Phone: +264 XXX XXX
+          </p>
         </div>
       </div>
+      <p className="f-small center mt-20">© {new Date().getFullYear()} FutureTech Africa. All rights reserved.</p>
     </footer>
   );
 }
-
-// export default function Footer() {
-//   return (
-//     <footer className="footer bg-dark-blue text-white py-8">
-//       <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
-//         <div className="flex items-center gap-2">
-//           <img src="/images/logo11.svg" alt="FutureTech Logo" className="h-12 w-auto" />
-//           <span className="font-bold text-lg">FutureTech</span>
-//         </div>
-
-//         <div className="text-sm text-center md:text-right">
-//           <p>&copy; {new Date().getFullYear()} FutureTech. All rights reserved.</p>
-//           <p className="opacity-70">Empowering learners through technology and AI.</p>
-//         </div>
-//       </div>
-//     </footer>
-//   );
-// }
