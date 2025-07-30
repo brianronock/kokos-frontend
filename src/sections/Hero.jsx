@@ -41,7 +41,7 @@ export default function Hero({ id }) {
                 <p>Discover AI Learning in Action</p>
               </div>
               <video controls playsInline controlsList="nodownload" preload="metadata" width="100%" poster="/images/kokosnam_logo.png">
-                <source src="/videos/kokos_india-video.mp4" type="video/mp4" />
+                <source src={`${import.meta.env.BASE_URL}videos/kokos_india-video.mp4`} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>

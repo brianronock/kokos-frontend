@@ -44,7 +44,7 @@ export default function Navbar() {
           onClick={() => handleLinkClick("/#hero", "hero")}
         >
           <img
-            src="/images/logo11.svg"
+            src={`${import.meta.env.BASE_URL}images/logo11.svg`}
             alt="FutureTech Africa Logo"
             className="logo-img"
           />
