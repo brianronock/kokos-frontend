@@ -1,5 +1,5 @@
-// src/components/Footer.jsx
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import ScrollLink from './ScrollLink';
 
 export default function Footer() {
   const location = useLocation();
@@ -9,16 +9,6 @@ export default function Footer() {
     { href: '/#how', id: 'how', label: 'How It Works' },
     { href: '/#contact', id: 'contact', label: 'Contact Us' },
   ];
-
-  const handleLinkClick = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      const navbarHeight = document.querySelector('.navBar')?.offsetHeight || 80;
-      const yOffset = -navbarHeight;
-      const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-    }
-  };
 
   return (
     <footer className="boxCont footer p-20">
@@ -32,13 +22,12 @@ export default function Footer() {
           <ul className="f-normal left">
             {links.map((link) => (
               <li key={link.href}>
-                <Link
-                  to={link.href}
+                <ScrollLink
+                  id={link.id}
                   className={`footer-link f-1 ${location.hash === `#${link.id}` ? 'selected' : ''}`}
-                  onClick={() => handleLinkClick(link.id)}
                 >
                   {link.label}
-                </Link>
+                </ScrollLink>
               </li>
             ))}
           </ul>

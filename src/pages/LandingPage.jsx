@@ -8,8 +8,12 @@ import FAQ from '../sections/FAQ';
 import Contact from '../sections/Contact';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import useScrollToHash from '../hooks/useScrollToHash';
 
 export default function LandingPage() {
+  
+  useScrollToHash();
+
   return (
     <div className="bg-t">
       <Navbar />
