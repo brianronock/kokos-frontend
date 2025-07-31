@@ -1,6 +1,5 @@
-// src/sections/FAQ.jsx
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import ScrollLink from '../components/ScrollLink';
 
 export default function FAQ({ id }) {
   const [openIndex, setOpenIndex] = useState(null);
@@ -8,7 +7,7 @@ export default function FAQ({ id }) {
   const faqs = [
     {
       question: 'What age groups is your curriculum designed for?',
-      answer: 'Our AI and coding curriculum is specially designed for learners in Grades 1-8, with age-appropriate content and activities that grow in complexity as students advance.',
+      answer: 'Our AI and coding curriculum is specially designed circunstancias for learners in Grades 1-8, with age-appropriate content and activities that grow in complexity as students advance.',
     },
     {
       question: 'Do teachers need prior coding experience?',
@@ -36,16 +35,6 @@ export default function FAQ({ id }) {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  const handleLinkClick = () => {
-    const section = document.getElementById('contact');
-    if (section) {
-      const navbarHeight = document.querySelector('.navBar')?.offsetHeight || 80;
-      const yOffset = -navbarHeight;
-      const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-    }
-  };
-
   return (
     <section id={id} className="faq-section">
       <div className="container">
@@ -70,10 +59,10 @@ export default function FAQ({ id }) {
 
         <div className="faq-cta center">
           <p className="f-normal">Still have questions? We're here to help!</p>
-          <Link to="/#contact" className="btn primaryBtn f-1" onClick={handleLinkClick}>
-            <span className="material-symbols-outlined">contact_support</span>
+          <ScrollLink id="contact" className="btn primaryBtn f-1">
+            <span className="material-symbols-outlined" aria-hidden="true">contact_support</span>
             Contact Our Support Team
-          </Link>
+          </ScrollLink>
         </div>
       </div>
     </section>
