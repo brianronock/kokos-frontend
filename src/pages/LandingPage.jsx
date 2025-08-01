@@ -1,4 +1,5 @@
 // src/pages/LandingPage.jsx
+import { useEffect } from 'react';
 import Hero from '../sections/Hero';
 import Why from '../sections/Why';
 import How from '../sections/How';
@@ -9,10 +10,19 @@ import Contact from '../sections/Contact';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import useScrollToHash from '../hooks/useScrollToHash';
+import usePreserveScroll from '../hooks/usePreserveScroll';
 
 export default function LandingPage() {
   
   useScrollToHash();
+  usePreserveScroll();
+
+  // Disable browser scroll restoration
+  useEffect(() => {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+  }, []);
 
   return (
     <div className="bg-t">
