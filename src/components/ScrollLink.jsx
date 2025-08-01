@@ -1,46 +1,14 @@
-// import { Link } from 'react-router-dom';
-
-// export default function ScrollLink({ id, children, className, onClick }) {
-//   const handleClick = () => {
-//     const section = document.getElementById(id);
-//     if (section) {
-//       const navbarHeight = document.querySelector('.navBar')?.offsetHeight || 80;
-//       const yOffset = -navbarHeight;
-//       const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
-//       window.scrollTo({ top: y, behavior: 'auto' });
-//     } else {
-//       console.error(`Section with id "${id}" not found`);
-//     }
-//     if (onClick) onClick();
-//   };
-
-//   return (
-//     <Link
-//       to={`#${id}`}
-//       className={className}
-//       onClick={(e) => {
-//         e.preventDefault();
-//         handleClick();
-//       }}
-//     >
-//       {children}
-//     </Link>
-//   );
-// }
-
-import { Link } from 'react-router-dom';
+// src/components/ScrollLink.js
+import { Link, useNavigate } from 'react-router-dom';
+import { scrollToElement } from '../utilities/scrollToElement';
 
 export default function ScrollLink({ id, children, className, onClick, behavior = 'auto' }) {
-  const handleClick = () => {
-    const section = document.getElementById(id);
-    if (section) {
-      const navbarHeight = document.querySelector('.navBar')?.offsetHeight || 80;
-      const yOffset = -navbarHeight + 60;
-      const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior });
-    } else {
-      console.error(`Section with id "${id}" not found`);
-    }
+  const navigate = useNavigate();
+
+  const handleClick = (e) => {
+    e.preventDefault(); // Prevent full page reload
+    navigate(`#${id}`); // Update hash via React Router
+    scrollToElement(id, behavior); // Scroll to element
     if (onClick) onClick();
   };
 
@@ -48,10 +16,7 @@ export default function ScrollLink({ id, children, className, onClick, behavior 
     <Link
       to={`#${id}`}
       className={className}
-      onClick={(e) => {
-        e.preventDefault();
-        handleClick();
-      }}
+      onClick={handleClick}
       aria-label={`Scroll to ${children}`}
     >
       {children}

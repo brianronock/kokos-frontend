@@ -6,9 +6,18 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
+  // Effect to handle body overflow and hash changes
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : '';
-    return () => (document.body.style.overflow = '');
+    // Listen for hash changes to update selected state
+    const handleHashChange = () => {
+      setMenuOpen(false); // Close menu on hash change
+    };
+    window.addEventListener('hashchange', handleHashChange);
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('hashchange', handleHashChange);
+    };
   }, [menuOpen]);
 
   const links = [
@@ -46,10 +55,14 @@ export default function Navbar() {
         </div>
         <div className="mobile-nav">
           <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-            <span className="material-symbols-outlined" aria-hidden="true">{menuOpen ? 'close' : 'menu'}</span>
+            <span className="material-symbols-outlined" aria-hidden="true">
+              {menuOpen ? 'close' : 'menu'}
+            </span>
           </button>
           {menuOpen && (
-            <div className="mobile-menu-overlay" onClick={() => setMenuOpen(false)}>
+            <div className="mobile-menu-overlay" onClick={(e) => {
+              if (e.target.className === 'mobile-menu-overlay') setMenuOpen(false);
+            }}>
               <div className="mobile-menu-items">
                 {links.map((link) => (
                   <ScrollLink

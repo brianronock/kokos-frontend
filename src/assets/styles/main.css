@@ -1,74 +1,76 @@
+/* navbar.css */
 @import './base.css';
 
+/* ==========================================================================
+   Global Styles
+   ========================================================================== */
 html {
-    width: 100%;
-
+  width: 100%;
 }
 
 body {
-    background-color: var(--bgCont);
-    font-family: var(--fBody);
-    font-weight: var(--fWeightBody);
-    font-size: var(--fSizeBody);
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-
+  background-color: var(--bgCont);
+  font-family: var(--fBody);
+  font-weight: var(--fWeightBody);
+  font-size: var(--fSizeBody);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 #root {
-    width: 100vw;
-    margin: 0 auto;
-    max-width: 1200px;
-    padding: 0;
-    /* padding: var(--gap); */
-    color: var(--coApp);
-    background-color: var(--bgBody);
-    overflow-x: hidden;
-
+  width: 100vw;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0;
+  color: var(--coApp);
+  background-color: var(--bgBody);
+  overflow-x: hidden;
 }
 
 #root * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 1em;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1em;
 }
 
 #root main {
-    background-color: var(--bgCont);
-    padding-top: 0px;
+  background-color: var(--bgCont);
+  padding-top: 0;
 }
 
-/*****************************************/
-/*standard elements                     */
-/*****************************************/
-#root div { padding: 0;}
+/* ==========================================================================
+   Standard Elements
+   ========================================================================== */
+#root div { padding: 0; }
 #root h1 { padding: 14px 3px 5px 3px; font-size: 1.8em; }
 #root h2 { padding: 12px 3px 3px 3px; font-size: 1.5em; }
 #root h3 { padding: 10px 3px 2px 3px; font-size: 1.3em; }
 #root h4 { padding: 8px 3px 1px 3px; font-size: 1.1em; }
 #root p { padding: 3px 3px 3px 3px; text-align: center; }
 #root span { display: inline-block; width: auto; }
-#root button, #root .btn {
-    width: auto;
-    padding: 7px 10px;
-    border-width: 0;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    transition: background-color 0.3s ease;
-    text-decoration: none;
+#root button,
+#root .btn {
+  width: auto;
+  padding: 7px 10px;
+  border-width: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease;
+  text-decoration: none;
 }
-#root button:hover, #root .btn:hover {
-    background-color: var(--bgBtnHover);
+#root button:hover,
+#root .btn:hover {
+  background-color: var(--bgBtnHover);
 }
 #root *.primaryBtn {
-    background-color: var(--bgCust1);
-    color: var(--coCust1);
+  background-color: var(--bgCust1);
+  color: var(--coCust1);
 }
 #root *.primaryBtn:hover {
-    background-color: var(--bgCust2);
+  background-color: var(--bgCust2);
 }
 #root *.btn-outline {
   border: 2px solid #fcbe03;
@@ -77,359 +79,380 @@ body {
 }
 #root *.btn-outline:hover {
   background-color: #fc9d037b;
-  color: #022d5e; 
+  color: #022d5e;
   transform: translateY(-3px);
 }
 #root input {
-    width: 150px;
-    padding: 5px 10px;
-    border-width: 0;
-    border-radius: var(--borderRad);
-    font-size: 1em;
+  width: 150px;
+  padding: 5px 10px;
+  border-width: 0;
+  border-radius: var(--borderRad);
+  font-size: 1em;
 }
 #root label {
-    width: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 5px;
-    border-radius: var(--borderRad);
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5px;
+  border-radius: var(--borderRad);
 }
 #root table {
-    border-radius: var(--borderRad);
-    overflow: hidden;
-    border-collapse: separate;
-    border-spacing: 5px;
+  border-radius: var(--borderRad);
+  overflow: hidden;
+  border-collapse: separate;
+  border-spacing: 5px;
 }
-#root table td, #root table th {
-    padding: 3px 8px;
-    border: 5px solid #00000000;
+#root table td,
+#root table th {
+  padding: 3px 8px;
+  border: 5px solid #00000000;
 }
 #root table tr:nth-child(even) td { background-color: rgba(255, 255, 255, 0.4); }
 #root table tr:nth-child(odd) td { background-color: rgba(0, 0, 0, 0.2); }
 #root ul { list-style-position: inside; list-style-type: square; }
 #root li { width: 100%; }
 #root img {
-    width: 100%;
-    object-fit: cover;
-    object-position: 50% 50%;
-    align-self: flex-start;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  align-self: flex-start;
 }
 #root select {
-    padding: 5px 5px 5px 5px;
-    border-radius: var(--borderRad);
-    border-width: 0;
+  padding: 5px 5px 5px 5px;
+  border-radius: var(--borderRad);
+  border-width: 0;
 }
 
-/*****************************************/
-/*Container                             */
-/*****************************************/
-/* #root div,
-div#root {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-content: flex-start;
-    border-radius: var(--borderRad);
-    gap: var(--gap);
-    width: 100%;
-    text-align: center;
-} */
-
-/*****************************************/
-/*boxHead                               */
-/*****************************************/
-
+/* ==========================================================================
+   Container Styles
+   ========================================================================== */
 #root .boxHead {
-    justify-content: flex-start;
-    align-content: center;
-    width: calc(100% - var(--gap));
-    padding: var(--paddingHeader);
-    border-radius: var(--borderRad);
-    background-color: var(--bgHead);
-    color: var(--coHead);
-    font-family: var(--fHeader);
-    font-weight: var(--fWeightHeader);
-    font-size: var(--fSizeHeader);
+  justify-content: flex-start;
+  align-content: center;
+  width: calc(100% - var(--gap));
+  padding: var(--paddingHeader);
+  border-radius: var(--borderRad);
+  background-color: var(--bgHead);
+  color: var(--coHead);
+  font-family: var(--fHeader);
+  font-weight: var(--fWeightHeader);
+  font-size: var(--fSizeHeader);
 }
 #root .boxHead > img { width: var(--imgSize); }
 #root .boxHead > div {
-    font-size: var(--fSizeHeader);
-    display: inline-block;
-    width: auto;
-    align-content: center;
+  font-size: var(--fSizeHeader);
+  display: inline-block;
+  width: auto;
+  align-content: center;
 }
 
-/*****************************************/
-/*boxCont                               */
-/*****************************************/
 #root .boxCont {
-    width: calc(100% - var(--gap));
-    padding: var(--gap);
-    padding-bottom: 15px;
-    background-color: var(--bgCont);
-    color: var(--coCont);
+  width: calc(100% - var(--gap));
+  padding: var(--gap);
+  padding-bottom: 15px;
+  background-color: var(--bgCont);
+  color: var(--coCont);
 }
-#root .boxCont h1, #root .boxCont h2, #root .boxCont h3, #root .boxCont h4 {
-    color: var(--bgHn);
+#root .boxCont h1,
+#root .boxCont h2,
+#root .boxCont h3,
+#root .boxCont h4 {
+  color: var(--bgHn);
 }
 
-/*****************************************/
-/*List                                  */
-/*****************************************/
+/* ==========================================================================
+   List Styles
+   ========================================================================== */
 #root .list {
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 0px;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
 }
 #root .list button {
-    color: rgb(26, 26, 122);
-    padding: 0px;
-    height: 28px;
-    width: 28px;
-    margin: 2px;
-    border-radius: 5px;
-    border-width: 0;
-    background-color: var(--bgListBtn);
-    cursor: pointer;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    transition: background-color 0.3s ease;
+  color: rgb(26, 26, 122);
+  padding: 0;
+  height: 28px;
+  width: 28px;
+  margin: 2px;
+  border-radius: 5px;
+  border-width: 0;
+  background-color: var(--bgListBtn);
+  cursor: pointer;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease;
 }
 #root .list button:hover {
-    background-color: var(--bgListBtnHover);
+  background-color: var(--bgListBtnHover);
 }
 #root .list button > img {
-    position: relative;
-    top: 2px;
-    height: 20px;
-    width: 20px;
-    margin: 0;
-    padding: 0;
+  position: relative;
+  top: 2px;
+  height: 20px;
+  width: 20px;
+  margin: 0;
+  padding: 0;
 }
 
-/*****************************************/
-/*Navbar                                */
-/*****************************************/
-/* Navbar */
+/* ==========================================================================
+   Navbar Styles
+   ========================================================================== */
 #root .navBar {
-    background-color: var(--bgNavBar);
-    padding: 10px 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    box-shadow: 4px 10px 16px -1px rgba(0, 0, 0, 0.4);
-    width: 100vw;
-    height: 60px;
-
+  background-color: var(--bgNavBar);
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 4px 10px 16px -1px rgba(0, 0, 0, 0.4);
+  width: 100vw;
+  height: 60px;
 }
+
 #root .navBar > .container {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 1rem;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: -20px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -20px;
 }
+
 #root .navBar .logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
+
 #root .navBar .logo-img {
-    height: 80px;
-    width: auto;
-    margin: 10px 0 0 20px;
-    transition: transform 0.3s ease;
+  height: 80px;
+  width: auto;
+  margin: 10px 0 0 20px;
+  transition: transform 0.3s ease;
 }
+
 #root .navBar .logo:hover .logo-img {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
+
 #root .navBar .desktop-nav {
-    display: none;
+  display: none;
 }
+
 #root .navBar .nav-link {
-    width: auto;
-    color: var(--coNavLink);
-    padding: 8px 12px;
-    margin: 0 4px;
-    font-size: 0.875em;
-    font-weight: 500;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: color 0.3s ease;
+  width: auto;
+  color: var(--coNavLink);
+  padding: 8px 12px;
+  margin: 0 4px;
+  font-size: 0.875em;
+  font-weight: 500;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
-#root .navBar .nav-link:hover, #root .navBar .nav-link.selected {
-    color: var(--coNavLinkHover);
-    background-color: var(--bgNavBtnHover);
+
+#root .navBar .nav-link:hover,
+#root .navBar .nav-link.selected {
+  color: var(--coNavLinkHover);
+  background-color: var(--bgNavBtnHover);
 }
+
 #root .navBar .mobile-nav {
-    display: block;
+  display: block;
 }
+
 #root .navBar .menu-toggle {
-    width: auto;
-    padding: 5px 8px 0 8px;
-    font-size: 2.7rem;
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 12px;
-    color: var(--coNavLink);
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    margin-right: 20px;
-    margin-top: -10px;
+  width: auto;
+  padding: 5px 8px 0 8px;
+  font-size: 2.7rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  color: var(--coNavLink);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  margin-right: 20px;
+  margin-top: -10px;
 }
+
 #root .navBar .menu-toggle:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
+
 #root .navBar .menu-toggle:active {
-    transform: scale(0.95);
-    color: var(--bgCust1);
+  transform: scale(0.95);
+  color: var(--bgCust1);
 }
+
 #root .navBar .mobile-menu-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(1, 7, 14, 0.6);
-    z-index: 999;
-    display: flex;
-    justify-content: flex-end;
-    padding-top: 64px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(1, 7, 14, 0.6);
+  z-index: 999;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 64px;
 }
+
 #root .navBar .mobile-menu-items {
-    margin-top: -5px;
-    background: rgba(109, 163, 255, 0.07);
-    width: 80%;
-    max-width: 300px;
-    border-radius: 12px;
-    padding: 16px 0;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    animation: slideIn 0.3s ease forwards;
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+  margin-top: -5px;
+  background: rgba(109, 163, 255, 0.07);
+  width: 80%;
+  max-width: 300px;
+  border-radius: 12px;
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  animation: slideIn 0.3s ease forwards;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
+
+#root .navBar .mobile-menu-items .mobile-nav-link.selected {
+  color: var(--coNavLinkHover);
+  background-color: rgba(109, 163, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.228);
+  animation: slideLeft 0.5s ease forwards;
+}
+
 @keyframes slideIn {
-    from { transform: translateY(-20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
+
 #root .navBar .mobile-nav-link {
-    width: auto;
-    padding: 16px;
-    color: var(--coNavLink);
-    border-radius: 12px;
-    font-size: 1em;
-    text-decoration: none;
-    transition: background 0.3s ease, color 0.3s ease;
+  width: auto;
+  padding: 16px;
+  color: var(--coNavLink);
+  border-radius: 12px;
+  font-size: 1em;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
 }
-#root .navBar .mobile-nav-link:hover, #root .navBar .mobile-nav-link.selected {
-    color: var(--coNavLinkHover);
-    background-color: rgba(109, 163, 255, 0.07);
-    border: 1px solid rgba(255, 255, 255, 0.228);
-    animation: slideLeft 0.5s ease forwards;
 
+#root .navBar .mobile-nav-link:hover,
+#root .navBar .mobile-nav-link.selected {
+  color: var(--coNavLinkHover);
+  background-color: rgba(109, 163, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.228);
+  animation: slideLeft 0.5s ease forwards;
 }
+
 #root .navBar .mobile-nav-link:active {
-    animation: slideLeft 0.3s ease forwards;
-}
-@keyframes slideLeft {
-    from { transform: translateX(-10px); opacity: 1; }
-    50% { transform:  translateX(20px); opacity: 0.3;}
-    85% { transform: translateX(-5px); opacity: 0.8; }
-    to { transform: translateX(0); opacity: 1; }
-}
-@media (min-width: 768px) {
-    #root .navBar .desktop-nav {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-    #root .navBar .mobile-nav {
-        display: none;
-    }
-    #root .navBar .logo-img {
-        margin: 15px 0 0 20px;
-    }
+  animation: slideLeft 0.3s ease forwards;
 }
 
-/* Footer */
+@keyframes slideLeft {
+  from { transform: translateX(-10px); opacity: 1; }
+  50% { transform: translateX(20px); opacity: 0.3; }
+  85% { transform: translateX(-5px); opacity: 0.8; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  #root .navBar .desktop-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #root .navBar .mobile-nav {
+    display: none;
+  }
+
+  #root .navBar .logo-img {
+    margin: 15px 0 0 20px;
+  }
+}
+
+/* ==========================================================================
+   Footer Styles
+   ========================================================================== */
 #root .boxCont.footer {
-    background-color: var(--bgCust4);
-    color: var(--coCust5);
-    padding: 20px;
+  background-color: var(--bgCust4);
+  color: var(--coCust5);
+  padding: 20px;
 }
 
 #root div.center {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-evenly;
-
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
 }
+
 #root div.w-33,
-#root div.w-33 p,
-#root div.w-33 p{
- display: flex;
- flex-direction: column;
- align-items: flex-start;
- text-align: left;
- justify-content: space-between;
+#root div.w-33 p {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  justify-content: space-between;
 }
 
 #root .boxCont.footer .footer-link {
-    width: auto;
-    color: var(--coNavLink);
-    text-decoration: none;
-    transition: color 0.3s ease, background-color 0.3s ease;
-}
-#root .boxCont.footer .footer-link:hover, #root .boxCont.footer .footer-link.selected {
-    color: var(--coNavLinkHover);
-    background-color: var(--bgNavBtnHover);
-}
-#root .boxCont.footer a[href^="mailto:"] {
-    color: var(--coNavLink);
-    text-decoration: underline;
-}
-#root .boxCont.footer a[href^="mailto:"]:hover {
-    color: var(--coNavLinkHover);
+  width: auto;
+  color: var(--coNavLink);
+  text-decoration: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-/*****************************************/
-/*horiz. alignment                      */
-/*****************************************/
+#root .boxCont.footer .footer-link:hover,
+#root .boxCont.footer .footer-link.selected {
+  color: var(--coNavLinkHover);
+  background-color: var(--bgNavBtnHover);
+}
+
+#root .boxCont.footer a[href^="mailto:"] {
+  color: var(--coNavLink);
+  text-decoration: underline;
+}
+
+#root .boxCont.footer a[href^="mailto:"]:hover {
+  color: var(--coNavLinkHover);
+}
+
+/* ==========================================================================
+   Alignment Utility Classes
+   ========================================================================== */
 #root *.center { justify-content: center; text-align: center; }
 #root *.left { justify-content: flex-start; text-align: left; }
 #root *.right { justify-content: flex-end; text-align: right; }
 #root *.justify { justify-content: space-between; text-align: justify; }
-#root *.center *, #root *.left *, #root *.right *, #root *.justify * {
-    justify-content: inherit;
-    text-align: inherit;
+#root *.center *,
+#root *.left *,
+#root *.right *,
+#root *.justify * {
+  justify-content: inherit;
+  text-align: inherit;
 }
-#root *.left button, #root *.right button { text-align: center; }
-#root *.center ul, #root *.right ul { list-style-type: none; }
+#root *.left button,
+#root *.right button { text-align: center; }
+#root *.center ul,
+#root *.right ul { list-style-type: none; }
 #root ul.left { list-style-type: square; }
-#root ul.right, #root ul.center { list-style-type: none; }
+#root ul.right,
+#root ul.center { list-style-type: none; }
 #root img.vTop { align-self: flex-start; }
 #root .boxCont.left { padding-left: calc(var(--gap) + 2px); padding-right: 2px; }
 #root .boxCont.right { padding-left: 2px; padding-right: calc(var(--gap) + 2px); }
-#root div.left { padding-left: 3px; padding-right: 0px; }
-#root div.right { padding-left: 0px; padding-right: 3px; }
+#root div.left { padding-left: 3px; padding-right: 0; }
+#root div.right { padding-left: 0; padding-right: 3px; }
 
-/*****************************************/
-/*vert. Alignment alignment             */
-/*****************************************/
 #root *.vCenter { align-content: center; }
 #root *.vTop { align-content: flex-start; }
 #root *.vBottom { align-content: flex-end; }
@@ -437,275 +460,286 @@ div#root {
 #root *.vAround { align-content: space-around; }
 #root *.vEvenly { align-content: space-evenly; }
 
-/*****************************************/
-/*Height, width, aspect ratio           */
-/*****************************************/
-#root *.h-0 { height: 0px; }
+/* ==========================================================================
+   Size Utility Classes
+   ========================================================================== */
+#root *.h-0 { height: 0; }
 #root *.h-1 { height: 1px; }
 #root *.h-2 { height: 2px; }
 #root *.h-3 { height: 3px; }
 #root *.h-4 { height: 4px; }
 #root *.h-5 { height: 5px; }
-#root *.h-10 {height: 10px;}
-#root *.h-15 {height: 15px;}
-#root *.h-20 {height: 20px;}
-#root *.h-25 {height: 25px;}
-#root *.h-30 {height: 30px;}
-#root *.h-35 {height: 35px;}
-#root *.h-40 {height: 40px;}
-#root *.h-45 {height: 45px;}
-#root *.h-50 {height: 50px;}
-#root *.h-55 {height: 55px;}
-#root *.h-60 {height: 60px;}
-#root *.h-65 {height: 65px;}
-#root *.h-70 {height: 70px;}
-#root *.h-75 {height: 75px;}
-#root *.h-80 {height: 80px;}
-#root *.h-85 {height: 85px;}
-#root *.h-90 {height: 90px;}
-#root *.h-95 {height: 95px;}
-#root *.h-100 {height: 100px;}
-#root *.h-125 {height: 125px;}
-#root *.h-150 {height: 150px;}
-#root *.h-175 {height: 175px;}
-#root *.h-200 {height: 200px;}
-#root *.h-225 {height: 225px;}
-#root *.h-250 {height: 250px;}
-#root *.h-275 {height: 275px;}
-#root *.h-300 {height: 300px;}
-#root *.h-325 {height: 325px;}
-#root *.h-350 {height: 350px;}
-#root *.h-375 {height: 375px;}
-#root *.h-400 {height: 400px;}
-#root *.h-425 {height: 425px;}
-#root *.h-450 {height: 450px;}
-#root *.h-475 {height: 475px;}
-#root *.h-500 {height: 500px;}
+#root *.h-10 { height: 10px; }
+#root *.h-15 { height: 15px; }
+#root *.h-20 { height: 20px; }
+#root *.h-25 { height: 25px; }
+#root *.h-30 { height: 30px; }
+#root *.h-35 { height: 35px; }
+#root *.h-40 { height: 40px; }
+#root *.h-45 { height: 45px; }
+#root *.h-50 { height: 50px; }
+#root *.h-55 { height: 55px; }
+#root *.h-60 { height: 60px; }
+#root *.h-65 { height: 65px; }
+#root *.h-70 { height: 70px; }
+#root *.h-75 { height: 75px; }
+#root *.h-80 { height: 80px; }
+#root *.h-85 { height: 85px; }
+#root *.h-90 { height: 90px; }
+#root *.h-95 { height: 95px; }
+#root *.h-100 { height: 100px; }
+#root *.h-125 { height: 125px; }
+#root *.h-150 { height: 150px; }
+#root *.h-175 { height: 175px; }
+#root *.h-200 { height: 200px; }
+#root *.h-225 { height: 225px; }
+#root *.h-250 { height: 250px; }
+#root *.h-275 { height: 275px; }
+#root *.h-300 { height: 300px; }
+#root *.h-325 { height: 325px; }
+#root *.h-350 { height: 350px; }
+#root *.h-375 { height: 375px; }
+#root *.h-400 { height: 400px; }
+#root *.h-425 { height: 425px; }
+#root *.h-450 { height: 450px; }
+#root *.h-475 { height: 475px; }
+#root *.h-500 { height: 500px; }
 
-#root *.w-10 {width: calc(10% - var(--gap));}
-#root *.w-15 {width: calc(15% - var(--gap))}
-#root *.w-20 {width: calc(20% - var(--gap))}
-#root *.w-25 {width: calc(25% - var(--gap))}
-#root *.w-30 {width: calc(30% - var(--gap))}
-#root *.w-33 {width: calc(33.33% - var(--gap))}
-#root *.w-35 {width: calc(35% - var(--gap))}
-#root *.w-40 {width: calc(40% - var(--gap))}
-#root *.w-45 {width: calc(45% - var(--gap))}
-#root *.w-50 {width: calc(50% - var(--gap))}
-#root *.w-55 {width: calc(55% - var(--gap))}
-#root *.w-60 {width: calc(60% - var(--gap))}
-#root *.w-65 {width: calc(65% - var(--gap))}
-#root *.w-70 {width: calc(70% - var(--gap))}
-#root *.w-75 {width: calc(75% - var(--gap))}
-#root *.w-80 {width: calc(80% - var(--gap))}
-#root *.w-85 {width: calc(85% - var(--gap))}
-#root *.w-90 {width: calc(90% - var(--gap))}
-#root *.w-95 {width: calc(95% - var(--gap))}
-#root *.w-100 {width: calc(100% - var(--gap))}
+#root *.w-10 { width: calc(10% - var(--gap)); }
+#root *.w-15 { width: calc(15% - var(--gap)); }
+#root *.w-20 { width: calc(20% - var(--gap)); }
+#root *.w-25 { width: calc(25% - var(--gap)); }
+#root *.w-30 { width: calc(30% - var(--gap)); }
+#root *.w-33 { width: calc(33.33% - var(--gap)); }
+#root *.w-35 { width: calc(35% - var(--gap)); }
+#root *.w-40 { width: calc(40% - var(--gap)); }
+#root *.w-45 { width: calc(45% - var(--gap)); }
+#root *.w-50 { width: calc(50% - var(--gap)); }
+#root *.w-55 { width: calc(55% - var(--gap)); }
+#root *.w-60 { width: calc(60% - var(--gap)); }
+#root *.w-65 { width: calc(65% - var(--gap)); }
+#root *.w-70 { width: calc(70% - var(--gap)); }
+#root *.w-75 { width: calc(75% - var(--gap)); }
+#root *.w-80 { width: calc(80% - var(--gap)); }
+#root *.w-85 { width: calc(85% - var(--gap)); }
+#root *.w-90 { width: calc(90% - var(--gap)); }
+#root *.w-95 { width: calc(95% - var(--gap)); }
+#root *.w-100 { width: calc(100% - var(--gap)); }
 
-#root *.ar-9 {aspect-ratio: 9;}
-#root *.ar-8 {aspect-ratio: 8;}
-#root *.ar-7 {aspect-ratio: 7;}
-#root *.ar-6 {aspect-ratio: 6;}
-#root *.ar-5 {aspect-ratio: 5;}
-#root *.ar-4 {aspect-ratio: 4;}
-#root *.ar-3 {aspect-ratio: 3;}
-#root *.ar-2 {aspect-ratio: 2;}
-#root *.ar-1 {aspect-ratio: 1;}
-#root *.ar-3-2 {aspect-ratio: 3/2}
-#root *.ar-3-4 {aspect-ratio: 3/4}
-#root *.ar-1-2 {aspect-ratio: 1/2}
-/*****************************************/
-/*padding & margin                      */
-/*****************************************/
-#root *.p-0 {padding: 0px}
-#root *.p-1 {padding: 1px}
-#root *.p-2 {padding: 2px}
-#root *.p-3 {padding: 3px}
-#root *.p-4 {padding: 4px}
-#root *.p-5 {padding: 5px}
-#root *.p-10 {padding: 10px}
-#root *.p-15 {padding: 15px}
-#root *.p-20 {padding: 20px}
-#root *.p-25 {padding: 25px}
-#root *.p-30 {padding: 30px}
-#root *.p-35 {padding: 35px}
-#root *.p-40 {padding: 40px}
-#root *.p-45 {padding: 45px}
-#root *.p-50 {padding: 50px}
+#root *.ar-9 { aspect-ratio: 9; }
+#root *.ar-8 { aspect-ratio: 8; }
+#root *.ar-7 { aspect-ratio: 7; }
+#root *.ar-6 { aspect-ratio: 6; }
+#root *.ar-5 { aspect-ratio: 5; }
+#root *.ar-4 { aspect-ratio: 4; }
+#root *.ar-3 { aspect-ratio: 3; }
+#root *.ar-2 { aspect-ratio: 2; }
+#root *.ar-1 { aspect-ratio: 1; }
+#root *.ar-3-2 { aspect-ratio: 3/2; }
+#root *.ar-3-4 { aspect-ratio: 3/4; }
+#root *.ar-1-2 { aspect-ratio: 1/2; }
 
-#root *.pr-0 {padding-right: 0px}
-#root *.pr-1 {padding-right: 1px}
-#root *.pr-2 {padding-right: 2px}
-#root *.pr-3 {padding-right: 3px}
-#root *.pr-4 {padding-right: 4px}
-#root *.pr-5 {padding-right: 5px}
-#root *.pr-10 {padding-right: 10px}
-#root *.pr-15 {padding-right: 15px}
-#root *.pr-20 {padding-right: 20px}
-#root *.pr-25 {padding-right: 25px}
-#root *.pr-30 {padding-right: 30px}
-#root *.pr-35 {padding-right: 35px}
-#root *.pr-40 {padding-right: 40px}
-#root *.pr-45 {padding-right: 45px}
-#root *.pr-50 {padding-right: 50px}
+/* ==========================================================================
+   Padding & Margin Utility Classes
+   ========================================================================== */
+#root *.p-0 { padding: 0; }
+#root *.p-1 { padding: 1px; }
+#root *.p-2 { padding: 2px; }
+#root *.p-3 { padding: 3px; }
+#root *.p-4 { padding: 4px; }
+#root *.p-5 { padding: 5px; }
+#root *.p-10 { padding: 10px; }
+#root *.p-15 { padding: 15px; }
+#root *.p-20 { padding: 20px; }
+#root *.p-25 { padding: 25px; }
+#root *.p-30 { padding: 30px; }
+#root *.p-35 { padding: 35px; }
+#root *.p-40 { padding: 40px; }
+#root *.p-45 { padding: 45px; }
+#root *.p-50 { padding: 50px; }
 
-#root *.pl-0 {padding-left: 0px}
-#root *.pl-1 {padding-left: 1px}
-#root *.pl-2 {padding-left: 2px}
-#root *.pl-3 {padding-left: 3px}
-#root *.pl-4 {padding-left: 4px}
-#root *.pl-5 {padding-left: 5px}
-#root *.pl-10 {padding-left: 10px}
-#root *.pl-15 {padding-left: 15px}
-#root *.pl-20 {padding-left: 20px}
-#root *.pl-25 {padding-left: 25px}
-#root *.pl-30 {padding-left: 30px}
-#root *.pl-35 {padding-left: 35px}
-#root *.pl-40 {padding-left: 40px}
-#root *.pl-45 {padding-left: 45px}
-#root *.pl-50 {padding-left: 50px}
+#root *.pr-0 { padding-right: 0; }
+#root *.pr-1 { padding-right: 1px; }
+#root *.pr-2 { padding-right: 2px; }
+#root *.pr-3 { padding-right: 3px; }
+#root *.pr-4 { padding-right: 4px; }
+#root *.pr-5 { padding-right: 5px; }
+#root *.pr-10 { padding-right: 10px; }
+#root *.pr-15 { padding-right: 15px; }
+#root *.pr-20 { padding-right: 20px; }
+#root *.pr-25 { padding-right: 25px; }
+#root *.pr-30 { padding-right: 30px; }
+#root *.pr-35 { padding-right: 35px; }
+#root *.pr-40 { padding-right: 40px; }
+#root *.pr-45 { padding-right: 45px; }
+#root *.pr-50 { padding-right: 50px; }
 
-#root *.pt-0 {padding-top: 0px}
-#root *.pt-1 {padding-top: 1px}
-#root *.pt-2 {padding-top: 2px}
-#root *.pt-3 {padding-top: 3px}
-#root *.pt-4 {padding-top: 4px}
-#root *.pt-5 {padding-top: 5px}
-#root *.pt-10 {padding-top: 10px}
-#root *.pt-15 {padding-top: 15px}
-#root *.pt-20 {padding-top: 20px}
-#root *.pt-25 {padding-top: 25px}
-#root *.pt-30 {padding-top: 30px}
-#root *.pt-35 {padding-top: 35px}
-#root *.pt-40 {padding-top: 40px}
-#root *.pt-45 {padding-top: 45px}
-#root *.pt-50 {padding-top: 50px}
+#root *.pl-0 { padding-left: 0; }
+#root *.pl-1 { padding-left: 1px; }
+#root *.pl-2 { padding-left: 2px; }
+#root *.pl-3 { padding-left: 3px; }
+#root *.pl-4 { padding-left: 4px; }
+#root *.pl-5 { padding-left: 5px; }
+#root *.pl-10 { padding-left: 10px; }
+#root *.pl-15 { padding-left: 15px; }
+#root *.pl-20 { padding-left: 20px; }
+#root *.pl-25 { padding-left: 25px; }
+#root *.pl-30 { padding-left: 30px; }
+#root *.pl-35 { padding-left: 35px; }
+#root *.pl-40 { padding-left: 40px; }
+#root *.pl-45 { padding-left: 45px; }
+#root *.pl-50 { padding-left: 50px; }
 
-#root *.pb-0 {padding-bottom: 0px}
-#root *.pb-1 {padding-bottom: 1px}
-#root *.pb-2 {padding-bottom: 2px}
-#root *.pb-3 {padding-bottom: 3px}
-#root *.pb-4 {padding-bottom: 4px}
-#root *.pb-5 {padding-bottom: 5px}
-#root *.pb-10 {padding-bottom: 10px}
-#root *.pb-15 {padding-bottom: 15px}
-#root *.pb-20 {padding-bottom: 20px}
-#root *.pb-25 {padding-bottom: 25px}
-#root *.pb-30 {padding-bottom: 30px}
-#root *.pb-35 {padding-bottom: 35px}
-#root *.pb-40 {padding-bottom: 40px}
-#root *.pb-45 {padding-bottom: 45px}
-#root *.pb-50 {padding-bottom: 50px}
+#root *.pt-0 { padding-top: 0; }
+#root *.pt-1 { padding-top: 1px; }
+#root *.pt-2 { padding-top: 2px; }
+#root *.pt-3 { padding-top: 3px; }
+#root *.pt-4 { padding-top: 4px; }
+#root *.pt-5 { padding-top: 5px; }
+#root *.pt-10 { padding-top: 10px; }
+#root *.pt-15 { padding-top: 15px; }
+#root *.pt-20 { padding-top: 20px; }
+#root *.pt-25 { padding-top: 25px; }
+#root *.pt-30 { padding-top: 30px; }
+#root *.pt-35 { padding-top: 35px; }
+#root *.pt-40 { padding-top: 40px; }
+#root *.pt-45 { padding-top: 45px; }
+#root *.pt-50 { padding-top: 50px; }
 
-#root *.m-0 {margin: 0px}
-#root *.m-1 {margin: 1px}
-#root *.m-2 {margin: 2px}
-#root *.m-3 {margin: 3px}
-#root *.m-4 {margin: 4px}
-#root *.m-5 {margin: 5px}
-#root *.m-10 {margin: 10px}
-#root *.m-15 {margin: 15px}
-#root *.m-20 {margin: 20px}
-#root *.m-25 {margin: 25px}
-#root *.m-30 {margin: 30px}
-#root *.m-35 {margin: 35px}
-#root *.m-40 {margin: 40px}
-#root *.m-45 {margin: 45px}
-#root *.m-50 {margin: 50px}
+#root *.pb-0 { padding-bottom: 0; }
+#root *.pb-1 { padding-bottom: 1px; }
+#root *.pb-2 { padding-bottom: 2px; }
+#root *.pb-3 { padding-bottom: 3px; }
+#root *.pb-4 { padding-bottom: 4px; }
+#root *.pb-5 { padding-bottom: 5px; }
+#root *.pb-10 { padding-bottom: 10px; }
+#root *.pb-15 { padding-bottom: 15px; }
+#root *.pb-20 { padding-bottom: 20px; }
+#root *.pb-25 { padding-bottom: 25px; }
+#root *.pb-30 { padding-bottom: 30px; }
+#root *.pb-35 { padding-bottom: 35px; }
+#root *.pb-40 { padding-bottom: 40px; }
+#root *.pb-45 { padding-bottom: 45px; }
+#root *.pb-50 { padding-bottom: 50px; }
 
-#root *.mr-0 {margin-right: 0px}
-#root *.mr-1 {margin-right: 1px}
-#root *.mr-2 {margin-right: 2px}
-#root *.mr-3 {margin-right: 3px}
-#root *.mr-4 {margin-right: 4px}
-#root *.mr-5 {margin-right: 5px}
-#root *.mr-10 {margin-right: 10px}
-#root *.mr-15 {margin-right: 15px}
-#root *.mr-20 {margin-right: 20px}
-#root *.mr-25 {margin-right: 25px}
-#root *.mr-30 {margin-right: 30px}
-#root *.mr-35 {margin-right: 35px}
-#root *.mr-40 {margin-right: 40px}
-#root *.mr-45 {margin-right: 45px}
-#root *.mr-50 {margin-right: 50px}
+#root *.m-0 { margin: 0; }
+#root *.m-1 { margin: 1px; }
+#root *.m-2 { margin: 2px; }
+#root *.m-3 { margin: 3px; }
+#root *.m-4 { margin: 4px; }
+#root *.m-5 { margin: 5px; }
+#root *.m-10 { margin: 10px; }
+#root *.m-15 { margin: 15px; }
+#root *.m-20 { margin: 20px; }
+#root *.m-25 { margin: 25px; }
+#root *.m-30 { margin: 30px; }
+#root *.m-35 { margin: 35px; }
+#root *.m-40 { margin: 40px; }
+#root *.m-45 { margin: 45px; }
+#root *.m-50 { margin: 50px; }
 
-#root *.ml-0 {margin-left: 0px}
-#root *.ml-1 {margin-left: 1px}
-#root *.ml-2 {margin-left: 2px}
-#root *.ml-3 {margin-left: 3px}
-#root *.ml-4 {margin-left: 4px}
-#root *.ml-5 {margin-left: 5px}
-#root *.ml-10 {margin-left: 10px}
-#root *.ml-15 {margin-left: 15px}
-#root *.ml-20 {margin-left: 20px}
-#root *.ml-25 {margin-left: 25px}
-#root *.ml-30 {margin-left: 30px}
-#root *.ml-35 {margin-left: 35px}
-#root *.ml-40 {margin-left: 40px}
-#root *.ml-45 {margin-left: 45px}
-#root *.ml-50 {margin-left: 50px}
+#root *.mr-0 { margin-right: 0; }
+#root *.mr-1 { margin-right: 1px; }
+#root *.mr-2 { margin-right: 2px; }
+#root *.mr-3 { margin-right: 3px; }
+#root *.mr-4 { margin-right: 4px; }
+#root *.mr-5 { margin-right: 5px; }
+#root *.mr-10 { margin-right: 10px; }
+#root *.mr-15 { margin-right: 15px; }
+#root *.mr-20 { margin-right: 20px; }
+#root *.mr-25 { margin-right: 25px; }
+#root *.mr-30 { margin-right: 30px; }
+#root *.mr-35 { margin-right: 35px; }
+#root *.mr-40 { margin-right: 40px; }
+#root *.mr-45 { margin-right: 45px; }
+#root *.mr-50 { margin-right: 50px; }
 
-#root *.mt-0 {margin-top: 0px}
-#root *.mt-1 {margin-top: 1px}
-#root *.mt-2 {margin-top: 2px}
-#root *.mt-3 {margin-top: 3px}
-#root *.mt-4 {margin-top: 4px}
-#root *.mt-5 {margin-top: 5px}
-#root *.mt-10 {margin-top: 10px}
-#root *.mt-15 {margin-top: 15px}
-#root *.mt--15 {margin-top: -15px}
-#root *.mt-20 {margin-top: 20px}
-#root *.mt-25 {margin-top: 25px}
-#root *.mt-30 {margin-top: 30px}
-#root *.mt-35 {margin-top: 35px}
-#root *.mt--35 {margin-top: -35px}
-#root *.mt-40 {margin-top: 40px}
-#root *.mt-45 {margin-top: 45px}
-#root *.mt-50 {margin-top: 50px}
+#root *.ml-0 { margin-left: 0; }
+#root *.ml-1 { margin-left: 1px; }
+#root *.ml-2 { margin-left: 2px; }
+#root *.ml-3 { margin-left: 3px; }
+#root *.ml-4 { margin-left: 4px; }
+#root *.ml-5 { margin-left: 5px; }
+#root *.ml-10 { margin-left: 10px; }
+#root *.ml-15 { margin-left: 15px; }
+#root *.ml-20 { margin-left: 20px; }
+#root *.ml-25 { margin-left: 25px; }
+#root *.ml-30 { margin-left: 30px; }
+#root *.ml-35 { margin-left: 35px; }
+#root *.ml-40 { margin-left: 40px; }
+#root *.ml-45 { margin-left: 45px; }
+#root *.ml-50 { margin-left: 50px; }
 
-#root *.mb-0 {margin-bottom: 0px}
-#root *.mb-1 {margin-bottom: 1px}
-#root *.mb-2 {margin-bottom: 2px}
-#root *.mb-3 {margin-bottom: 3px}
-#root *.mb-4 {margin-bottom: 4px}
-#root *.mb-5 {margin-bottom: 5px}
-#root *.mb-10 {margin-bottom: 10px}
-#root *.mb-15 {margin-bottom: 15px}
-#root *.mb-20 {margin-bottom: 20px}
-#root *.mb-25 {margin-bottom: 25px}
-#root *.mb-30 {margin-bottom: 30px}
-#root *.mb-35 {margin-bottom: 35px}
-#root *.mb-40 {margin-bottom: 40px}
-#root *.mb-45 {margin-bottom: 45px}
-#root *.mb-50 {margin-bottom: 50px}
+#root *.mt-0 { margin-top: 0; }
+#root *.mt-1 { margin-top: 1px; }
+#root *.mt-2 { margin-top: 2px; }
+#root *.mt-3 { margin-top: 3px; }
+#root *.mt-4 { margin-top: 4px; }
+#root *.mt-5 { margin-top: 5px; }
+#root *.mt-10 { margin-top: 10px; }
+#root *.mt-15 { margin-top: 15px; }
+#root *.mt--15 { margin-top: -15px; }
+#root *.mt-20 { margin-top: 20px; }
+#root *.mt-25 { margin-top: 25px; }
+#root *.mt-30 { margin-top: 30px; }
+#root *.mt-35 { margin-top: 35px; }
+#root *.mt--35 { margin-top: -35px; }
+#root *.mt-40 { margin-top: 40px; }
+#root *.mt-45 { margin-top: 45px; }
+#root *.mt-50 { margin-top: 50px; }
 
+#root *.mb-0 { margin-bottom: 0; }
+#root *.mb-1 { margin-bottom: 1px; }
+#root *.mb-2 { margin-bottom: 2px; }
+#root *.mb-3 { margin-bottom: 3px; }
+#root *.mb-4 { margin-bottom: 4px; }
+#root *.mb-5 { margin-bottom: 5px; }
+#root *.mb-10 { margin-bottom: 10px; }
+#root *.mb-15 { margin-bottom: 15px; }
+#root *.mb-20 { margin-bottom: 20px; }
+#root *.mb-25 { margin-bottom: 25px; }
+#root *.mb-30 { margin-bottom: 30px; }
+#root *.mb-35 { margin-bottom: 35px; }
+#root *.mb-40 { margin-bottom: 40px; }
+#root *.mb-45 { margin-bottom: 45px; }
+#root *.mb-50 { margin-bottom: 50px; }
 
-/*****************************************/
-/*Colors Font & Text                    */
-/*****************************************/
+/* ==========================================================================
+   Color, Font, and Text Utility Classes
+   ========================================================================== */
 #root *.bg-t { background-color: rgba(255, 255, 255, 0); }
 #root *.bg-tw { background-color: rgba(255, 255, 255, 0.25); }
 #root *.bg-tb { background-color: rgba(0, 0, 0, 0.25); }
-#root *.bg-1, #root .boxCont.bg-1 { background-color: var(--bgCust1); }
-#root *.bg-2, #root .boxCont.bg-2 { background-color: var(--bgCust2); }
-#root *.bg-3, #root .boxCont.bg-3 { background-color: var(--bgCust3); }
-#root *.bg-4, #root .boxCont.bg-4 { background-color: var(--bgCust4); }
-#root *.bg-5, #root .boxCont.bg-5 { background-color: var(--bgCust5); }
-#root *.bg-6, #root .boxCont.bg-6 { background-color: var(--bgCust6); }
-#root *.co-1, #root .boxCont.co-1 * { color: var(--coCust1); }
-#root *.co-2, #root .boxCont.co-2 * { color: var(--coCust2); }
-#root *.co-3, #root .boxCont.co-3 * { color: var(--coCust3); }
-#root *.co-4, #root .boxCont.co-4 * { color: var(--coCust4); }
-#root *.co-5, #root .boxCont.co-5 * { color: var(--coCust5); }
-#root *.co-6, #root .boxCont.co-6 * { color: var(--coCust6); }
+#root *.bg-1,
+#root .boxCont.bg-1 { background-color: var(--bgCust1); }
+#root *.bg-2,
+#root .boxCont.bg-2 { background-color: var(--bgCust2); }
+#root *.bg-3,
+#root .boxCont.bg-3 { background-color: var(--bgCust3); }
+#root *.bg-4,
+#root .boxCont.bg-4 { background-color: var(--bgCust4); }
+#root *.bg-5,
+#root .boxCont.bg-5 { background-color: var(--bgCust5); }
+#root *.bg-6,
+#root .boxCont.bg-6 { background-color: var(--bgCust6); }
+#root *.co-1,
+#root .boxCont.co-1 * { color: var(--coCust1); }
+#root *.co-2,
+#root .boxCont.co-2 * { color: var(--coCust2); }
+#root *.co-3,
+#root .boxCont.co-3 * { color: var(--coCust3); }
+#root *.co-4,
+#root .boxCont.co-4 * { color: var(--coCust4); }
+#root *.co-5,
+#root .boxCont.co-5 * { color: var(--coCust5); }
+#root *.co-6,
+#root .boxCont.co-6 * { color: var(--coCust6); }
 #root *.t-upper { text-transform: uppercase; }
 #root *.t-lower { text-transform: lowercase; }
 #root *.t-cap { text-transform: capitalize; }
 #root *.t-hv { font-style: italic; font-weight: bold; }
 #root *.f-italic { font-style: italic; }
 #root *.f-bold { font-weight: bold; }
-#root *.f-small { font-size: 0.8em; }*/
 #root *.f-normal { font-size: 1em; }
 #root *.f-big { font-size: 1.2em; }
 #root *.f-bigest { font-size: 1.4em; }
@@ -719,13 +753,25 @@ div#root {
 #root *.f-7 { font-family: var(--fCust7); }
 #root *.f-8 { font-family: var(--fCust8); }
 #root *.f-9 { font-family: var(--fCust9); }
-#root *.f-1 select, #root *.f-2 select, #root *.f-3 select,
-#root *.f-4 select, #root *.f-5 select, #root *.f-6 select,
-#root *.f-7 select, #root *.f-8 select, #root *.f-9 select {
-    font-family: inherit;
+#root *.f-1 select,
+#root *.f-2 select,
+#root *.f-3 select,
+#root *.f-4 select,
+#root *.f-5 select,
+#root *.f-6 select,
+#root *.f-7 select,
+#root *.f-8 select,
+#root *.f-9 select {
+  font-family: inherit;
 }
-#root select.f-1, #root select.f-2, #root select.f-3,
-#root select.f-4, #root select.f-5, #root select.f-6,
-#root select.f-7, #root select.f-8, #root select.f-9 {
-    font-family: initial;
+#root select.f-1,
+#root select.f-2,
+#root select.f-3,
+#root select.f-4,
+#root select.f-5,
+#root select.f-6,
+#root select.f-7,
+#root select.f-8,
+#root select.f-9 {
+  font-family: initial;
 }
